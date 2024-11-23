@@ -1,4 +1,4 @@
-package DependencyPractice;
+package com.DependencyPractice;
 
 public interface Vehicle {
 

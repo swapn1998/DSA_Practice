@@ -7,7 +7,7 @@ public class Main1 {
 
     public static void main(String[] args) {
 
-        ApplicationContext btx =new ClassPathXmlApplicationContext("applcationContext.xml");
+        ApplicationContext btx =new ClassPathXmlApplicationContext("applicationContext.xml");
 
         Travel tr = btx.getBean(Travel.class,"travel");
 

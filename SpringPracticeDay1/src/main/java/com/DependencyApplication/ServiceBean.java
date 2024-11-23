@@ -1,4 +1,4 @@
-package com.NewApplication;
+package com.DependencyApplication;
 
 public class ServiceBean {
 

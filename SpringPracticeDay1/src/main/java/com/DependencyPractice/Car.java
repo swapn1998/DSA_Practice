@@ -1,4 +1,4 @@
-package DependencyPractice;
+package com.DependencyPractice;
 
 public class Car implements Vehicle {
 

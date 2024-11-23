@@ -1,4 +1,4 @@
-package com.NewApplication;
+package com.DependencyApplication;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

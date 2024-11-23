@@ -1,4 +1,4 @@
-package SpringStudy.DAY1;
+package SpringStudy.DAY1.TightCoupling;
 
 public class B{
 
