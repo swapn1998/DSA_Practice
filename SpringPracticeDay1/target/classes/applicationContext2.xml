@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="s1" class="com.ListInjection_Ex2.Student">
+
+        <constructor-arg name="roll" value="1"/>
+        <constructor-arg name="name" value="Raju"/>
+        <constructor-arg name="marks" value="78"/>
+
+
+    </bean>
+
+
+    <bean id="s2" class="com.ListInjection_Ex2.Student">
+
+        <constructor-arg name="roll" value="28"/>
+        <constructor-arg name="name" value="Pawan"/>
+        <constructor-arg name="marks" value="98"/>
+
+
+    </bean>
+
+
+    <bean id="s3" class="com.ListInjection_Ex2.Student">
+
+        <constructor-arg name="roll" value="37"/>
+        <constructor-arg name="name" value="Kamal"/>
+        <constructor-arg name="marks" value="90"/>
+
+
+    </bean>
+
+
+
+    <bean id="clg" class="com.ListInjection_Ex2.College">
+
+        <constructor-arg name="collegeName" value="NIT"/>
+        
+        <property name="students">
+
+            <list>
+
+
+                <ref bean="s1"/>
+
+                <ref bean="s2"/>
+
+                <ref bean="s3"/>
+
+
+            </list>
+
+        </property>
+
+
+
+    </bean>
+
+
+    <bean id="name" class="com.normalListInjection.list">
+
+        <property name="list">
+
+            <list>
+
+                <value>Delhi</value>
+                <value>Pune</value>
+                <value>Beed</value>
+                <value>Kannada</value>
+
+
+            </list>
+
+        </property>
+
+
+
+
+    </bean>
+
+
+
+    <bean id="set1" class="com.normalSetInjection.A">
+
+        <property name="set">
+
+            <set>
+
+
+              <value>Pawan</value>
+
+                <value>Raju</value>
+
+                <value>Jan</value>
+
+
+
+            </set>
+
+        </property>
+
+
+
+
+    </bean>
+
+
+
+
+</beans>

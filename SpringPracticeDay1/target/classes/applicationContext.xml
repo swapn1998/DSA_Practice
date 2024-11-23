@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+
+    <bean id="car" class="com.DependencyPractice.Car"/>
+
+    <bean id="bike" class="com.DependencyPractice.Bike"/>
+
+
+
+    <bean id="travel" class="com.DependencyPractice.Travel">
+
+
+        <property name="numberOfPerson" value="8"/>
+
+        <property name="v" ref="bike"/>
+
+
+    </bean>
+
+    <bean id="a1" class="com.CircularDependency.A">
+
+        <property ref="b1" name="b1"/>
+
+    </bean>
+
+
+    <bean id="b1" class="com.CircularDependency.B">
+
+        <constructor-arg ref="a1"/>
+
+    </bean>
+
+
+    <bean id="Dao" class="com.DependencyApplication.DaoBean"/>
+
+    <bean id="service" class="com.DependencyApplication.ServiceBean">
+
+        <property name="dao" ref="Dao"/>
+
+    </bean>
+
+    <bean id="presentation" class="com.DependencyApplication.PresentationBean">
+
+        <property name="serviceBean" ref="service"/>
+
+    </bean>
+
+
+
+    <bean id="initialzie" class="com.BeanIntialization.A" init-method="mySetUp">
+        
+        <property name="message" value="Welcome to Spring.."/>
+        
+    </bean>
+
+    <bean id="disposing" class="com.BeanDisposing.A" init-method="mySetUp" destroy-method="Destroy">
+
+        <property name="message" value="travelling towards mySetUp method........"/>
+
+    </bean>
+
+
+    <bean id="list" class="com.ListInjection.ListInjection">
+
+        <property name="names">
+
+            <list>
+            <value>Swapnil</value>
+            <value>Raj</value>
+            <value>Vamsi</value>
+            <value>Shivraj</value>
+            </list>
+
+
+        </property>
+
+
+
+    </bean>
+
+
+</beans>
