@@ -5,7 +5,7 @@ public class Node {
     int data;
     Node next;
 
-    Node(int data1,int next1){
+    public Node(int data1,int next1){
         this.data=data1;
         this.next=next;
     }
@@ -15,4 +15,9 @@ public class Node {
         this.next=null;
     }
 
+    public Node(Node head, int val) {
+
+        this.data=val;
+        this.next=head;
+    }
 }
