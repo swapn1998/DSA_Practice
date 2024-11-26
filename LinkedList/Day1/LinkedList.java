@@ -152,18 +152,18 @@ public class LinkedList {
             return head;
         }
 
-        Node prev = null;
+        Node prev1 = null;
         Node temp = head;
 
         while(temp!=null)
         {
             if(temp.data==value)
             {
-                prev.next = prev.next.next;
+                prev1.next = prev1.next.next;
                 break;
             }
 
-            prev = temp;
+            prev1 = temp;
             temp = temp.next;
 
 
