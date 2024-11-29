@@ -51,13 +51,49 @@ public class DoublyLinkedList1 {
 
     }
 
+
+    // Delete tail of the linked List
+
+    public static Node deleteTailLL(Node head){
+
+
+             Node tail =head;
+
+
+             while(tail.next!=null)
+             {
+                 tail= tail.next;
+             }
+
+            Node prev = tail.back;
+             prev.next = null;
+             tail.back=null;
+
+             return head;
+
+    }
+
+
     public static void main(String[] args) {
 
      int[] arr ={1,2,3,4,5};
      Node head = convertArrToDLL(arr);
 
      head= deleteHeadLL(head);
-     printDoublyLL(head);
+
+        System.out.println("Deleted head list of LL : ");
+        printDoublyLL(head);
+
+     //Delete Tail of LL
+
+        Node head2 = convertArrToDLL(arr);
+
+        head2= deleteTailLL(head2);
+
+        System.out.println("Deleted tail list of LL : ");
+        printDoublyLL(head2);
+
+
 
     }
 
