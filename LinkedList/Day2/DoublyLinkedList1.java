@@ -20,12 +20,12 @@ public class DoublyLinkedList1 {
 
          public static void printDoublyLL(Node head){
 
-             Node temp = head;
+             Node temp1 = head;
 
-             while(temp!=null)
+             while(temp1!=null)
              {
-                 System.out.println("Next Node data :"+temp.data + " ");
-                 temp= temp.next;
+                 System.out.println("Next Node data :"+temp1.data +" ");
+                 temp1= temp1.next;
              }
 
          }
